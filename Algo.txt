@@ -1,0 +1,26 @@
+Paramètres sur lesquels agir :
+	nombre de robots
+	distance parcourue
+	quantité d'infos échangées
+	comportement du robot
+
+
+Cas 1 : "Retour à la base"
+
+	Une base positionnée sur la carte centralise les informations
+	Chaque robot part de la base et y revient pour ramener ses infos
+	Un robot transmet correctement une info à la base
+	Les robots partent de la base avec des crédits de déplacements fixés et peuvent s'échanger des crédits
+	Une case de la carte est validée si elle est connue par 10 robots
+
+
+Cas 2 : "Tu viens d'où ?"
+		
+	Les robots partent de différentes positions de la carte
+	Ils peuvent s'échanger des informations à chaque rencontre
+	Une connaissance acquise personnellement vaut 2pt 	(valeur à changer ?)
+	Une connaissance acquise d'un autre robot vaut 1pt 	(valeur à changer ?)
+	Une connaissance est validée pour 5 pt 	(valeur à changer ?)
+
+
+Condition d'arrêt : la carte est connue par tous les robots
