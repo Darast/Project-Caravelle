@@ -28,7 +28,7 @@ public class RollerBall : MonoBehaviour {
 			if (Input.GetButton ("Vertical")) {
 				mRigidBody.AddTorque(Vector3.right * Input.GetAxis("Vertical")*10);
 			}
-			if (Input.GetButtonDown("Jump")/* && mFloorTouched*/) {
+			if (Input.GetButtonDown("Jump") && mFloorTouched) {
 				if(mAudioSource != null && JumpSound != null){
 					mAudioSource.PlayOneShot(JumpSound);
 				}
