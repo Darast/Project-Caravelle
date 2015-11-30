@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEditor;
+
 
 //<summary>
 //Game object, that creates maze and instantiates it in scene
@@ -90,5 +92,8 @@ public class MazeSpawner : MonoBehaviour {
 				}
 			}
 		}
+
+        //GameObject go = (GameObject) GetComponent<GameObject>();
+        PrefabUtility.CreatePrefab("Assets/maze_1.prefab", this.gameObject);
 	}
 }

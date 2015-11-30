@@ -57,22 +57,18 @@
      <Compile Include="Assets\MazeGenerator\Scripts\TreeMazeGenerator.cs" />
      <Compile Include="Assets\Scripts\MapInformation.cs" />
      <Compile Include="Assets\Scripts\Robot.cs" />
+     <Compile Include="Assets\Scripts\RobotAlgorithm1.cs" />
+     <Compile Include="Assets\Scripts\RobotAlgorithme2.cs" />
      <Compile Include="Assets\ToonBot\ToonBot(Free) Assets\Controller\RobotTestScriptFree.cs" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-LightedOutline.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Lighted.shader" />
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>D:/Program_files/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Program_files/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>D:/Program_files/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Analytics">
- <HintPath>D:/Program_files/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="Mono.Cecil">
  <HintPath>D:/Program_files/Editor/Data/Managed/Mono.Cecil.dll</HintPath>

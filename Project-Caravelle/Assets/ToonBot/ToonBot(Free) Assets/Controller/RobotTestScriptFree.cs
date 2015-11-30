@@ -15,7 +15,7 @@ public class RobotTestScriptFree : MonoBehaviour {
 		anim = this.gameObject.GetComponent<Animator> ();
         rb = GetComponent<Rigidbody>();
         nav = GetComponent<NavMeshAgent>();
-        destination.Set(10, 0, 0);
+        destination.Set(10, 0, 25);
         nav.SetDestination(destination);
     }
 
@@ -30,13 +30,30 @@ public class RobotTestScriptFree : MonoBehaviour {
         //2: Run
         //3: Jump
 
-        if(rb.position != destination) {
+        Debug.Log("rb : " + rb.position);
+        Debug.Log("destination : " + destination);
+        // Debug.Log("boolx : " + (rb.position.x.Equals(destination.x)));
+        // Debug.Log("boolz : " + (rb.position.z.Equals(destination.z)));
+        //        Debug.Log("x " + (int) rb.position.x);
+        //        Debug.Log("y " + (int) rb.position.y);
+        //        Debug.Log("z " + (int) rb.position.z); 
+        //        Debug.Log("dx " + destination.x);
+        //        Debug.Log("dy " + destination.y);
+        //        Debug.Log("dz " + destination.z);
+
+        int x_dest = (int)destination.x;
+        int y_dest = (int)destination.y;
+        int x_pos = (int)rb.position.x;
+        int y_pos = (int)rb.position.y;
+
+        if (!(x_dest.Equals(x_pos) && y_dest.Equals(y_pos))) {
             anim.SetInteger("Speed", 1);
         }
-        else if(rb.position == destination)
+        else
         {
-            //nav.SetDestination(destination*Random.value);
             anim.SetInteger("Speed", 0);
+            new_destination();
+            Debug.Log("test");
         }
 
         //if (Input.GetButton("Vertical")||Input.GetButton("Horizontal")) anim.SetInteger("Speed", 1);
@@ -54,4 +71,12 @@ public class RobotTestScriptFree : MonoBehaviour {
 			else if (anim.GetBool ("Jumping") == true) anim.SetBool ("Jumping", false);
 
 	}
+
+    void new_destination()
+    {
+        destination.x = destination.x * Random.value;
+        destination.z = destination.z * Random.value;
+        nav.SetDestination(destination);
+        Debug.Log("new_postition()");
+    }
 }
